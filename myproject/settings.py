@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pg^2i1um@z$47!n@%wlggs@o3bik0chya#@k+h42kn475j=64w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lovalhost', '95.163.241.92']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '95.163.241.92']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'employee',
+    'resume',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +129,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "employee.Employee"
